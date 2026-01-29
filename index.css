@@ -1,0 +1,239 @@
+/* ========================================
+   PROCONTRACTORS - WordPress Plugin CSS
+   Custom fonts and WordPress isolation
+   ======================================== */
+
+/* Custom Font - Optimized Loading */
+@font-face {
+  font-family: 'CustomFont';
+  src: url('./Fonts/file.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ========================================
+   WordPress CSS Reset & Isolation
+   Ensures our styles don't conflict with WP
+   ======================================== */
+
+/* WordPress container wrapper */
+.procontractors-container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.procontractors-fullwidth {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+/* Main container - isolates from WordPress styles */
+#pro-contractors-root {
+  display: block;
+  width: 100%;
+  min-height: 100px;
+  font-family: 'Sora', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333333;
+  background-color: transparent;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Apply box-sizing to all elements */
+#pro-contractors-root *,
+#pro-contractors-root *::before,
+#pro-contractors-root *::after,
+.procontractors-container *,
+.procontractors-container *::before,
+.procontractors-container *::after {
+  box-sizing: border-box;
+}
+
+/* WordPress Container Override - Ensure our fonts take priority */
+#pro-contractors-root,
+#pro-contractors-root *,
+.procontractors-container,
+.procontractors-container * {
+  font-family: 'Sora', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+}
+
+/* Reset WordPress default element styles */
+#pro-contractors-root h1,
+#pro-contractors-root h2,
+#pro-contractors-root h3,
+#pro-contractors-root h4,
+#pro-contractors-root h5,
+#pro-contractors-root h6,
+#pro-contractors-root p,
+#pro-contractors-root ul,
+#pro-contractors-root ol,
+#pro-contractors-root li,
+#pro-contractors-root figure,
+#pro-contractors-root figcaption,
+#pro-contractors-root blockquote,
+#pro-contractors-root dl,
+#pro-contractors-root dd {
+  margin: 0;
+  padding: 0;
+}
+
+#pro-contractors-root ul,
+#pro-contractors-root ol {
+  list-style: none;
+}
+
+#pro-contractors-root a {
+  text-decoration: none;
+  color: inherit;
+  background-color: transparent;
+}
+
+#pro-contractors-root a:hover,
+#pro-contractors-root a:focus {
+  text-decoration: none;
+}
+
+#pro-contractors-root img,
+#pro-contractors-root picture,
+#pro-contractors-root video,
+#pro-contractors-root canvas,
+#pro-contractors-root svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+#pro-contractors-root button,
+#pro-contractors-root input,
+#pro-contractors-root select,
+#pro-contractors-root textarea {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+#pro-contractors-root button {
+  cursor: pointer;
+}
+
+#pro-contractors-root table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* ========================================
+   Font Family Classes for WordPress
+   Use !important to override WP defaults
+   ======================================== */
+
+#pro-contractors-root .font-sora,
+.procontractors-container .font-sora {
+  font-family: 'Sora', sans-serif !important;
+}
+
+#pro-contractors-root .font-cormorant,
+.procontractors-container .font-cormorant {
+  font-family: 'Cormorant Garamond', serif !important;
+}
+
+#pro-contractors-root .font-wix-madefor,
+.procontractors-container .font-wix-madefor {
+  font-family: 'Wix Madefor Display', sans-serif !important;
+}
+
+#pro-contractors-root .font-custom,
+.procontractors-container .font-custom {
+  font-family: 'CustomFont', sans-serif !important;
+}
+
+#pro-contractors-root .font-times,
+.procontractors-container .font-times {
+  font-family: 'Times New Roman', Times, serif !important;
+}
+
+#pro-contractors-root .font-fraunces,
+.procontractors-container .font-fraunces {
+  font-family: 'Fraunces', serif !important;
+}
+
+/* Fallback font classes to prevent FOUT */
+body {
+  font-family: 'Sora', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+}
+
+/* Full width container for WordPress */
+.procontractors-fullwidth {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Modal Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes scaleOut {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+}
+
+/* Line clamp utility for URL previews */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-clamp: 2;
+  overflow: hidden;
+}
